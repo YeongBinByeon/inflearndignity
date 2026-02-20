@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 조건문 - switch
+
+      // Date 객체 - 날짜와 시간과 관련된 객체
+      const d = new Date();
+      const day = d.getDay(); // 코드가 실행되는 시점의 요일, 0:일, 1:월, 2:화
+      console.log(day);
+
+      let dayName = "";
+
+      switch (day) {
+        case 0:
+          dayName = "일요일";
+          break;
+        case 1:
+          dayName = "월요일";
+          break;
+        case 2:
+          dayName = "화요일";
+          break;
+        case 3:
+          dayName = "수요일";
+          break;
+        case 4:
+          dayName = "목요일";
+          break;
+        case 5:
+          dayName = "금요일";
+          break;
+        case 6:
+          dayName = "토요일";
+          break;
+      }
+      console.log(dayName);
+
+      const dayNames = [
+        "일요일",
+        "월요일",
+        "화요일",
+        "수요일",
+        "목요일",
+        "금요일",
+        "토요일",
+      ];
+      console.log(dayNames[day]);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let brands = ["애플", "구글", "아마존", "마이크로소프트", "메타"];
+      for (const index in brands) {
+        console.log(index);
+      }
+
+      let person = {
+        name: "홍길동",
+        age: 22,
+        tel: "010-0000-0000",
+        city: "Seoul",
+      };
+
+      for (const key in person) {
+        console.log(key, person[key]);
+      }
+    </script>
+  </body>
+</html>

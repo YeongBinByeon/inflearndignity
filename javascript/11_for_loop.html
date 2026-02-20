@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Array Object
+      let brands = ["애플", "구글", "아마존", "마이크로소프트", "메타"];
+
+      const length = brands.length;
+
+      for (let i = 0; i < length; i++) {
+        console.log(brands[i]);
+      }
+
+      const productList = [
+        { name: "오렌지", price: 1000 },
+        { name: "파워에이드", price: 1500 },
+        { name: "커피", price: 700 },
+        { name: "보리음료", price: 1200 },
+        { name: "코카콜라", price: 1000 },
+      ];
+
+      const inputCoin = 1200;
+      const items = productList.filter((i) => {
+        return i.price <= inputCoin;
+      });
+      console.log(items);
+
+      for (let i = 0; i < 10; i++) {
+        if (i === 5) {
+          break;
+        }
+        console.log(i);
+      }
+
+      for (let i = 0; i < 10; i++) {
+        if (i === 5) {
+          continue;
+        }
+        console.log(i);
+      }
+    </script>
+  </body>
+</html>
