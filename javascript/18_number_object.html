@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Number 객체
+      let num = 323;
+      // toString() - Number -> String
+      let strNum = num.toString();
+
+      // toExponential() - 숫자를 지수표기법으로 반환, 문자열로 반환
+      let x = 10.656;
+      console.log(x.toExponential());
+
+      // toFixed() - 소수점 몇자리까지 보여줄지 결정하는 함수
+      // 반올림해서 자리수 맞춰줌
+      // 12.348723
+      //3.18421212
+      // 소수점 2자리로 표기, 소수점 1자리
+      console.log(x.toFixed(1));
+      let xx = 20;
+      console.log(xx.toFixed(2));
+
+      // toPrecision() - 정수와 소수점 모두를 합쳐서 몇자리까지 보여줄지 결정
+      console.log(x.toPrecision(2));
+
+      // parseInt() - 전역함수, 문자를 정수로 반환
+      // 사용자로부터 입력 받은 숫자 값을 연산을 해야 하는 경우 parseInt() 많이 사용
+      console.log(parseInt("3")); // 숫자 3
+      console.log(parseInt("12.33")); // 숫자 12
+      console.log(parseInt("12.77")); // 숫자 12
+
+      // parseFloat() - 부동소수점으로 반환
+      console.log(parseFloat("12.33"));
+      console.log(Number.MAX_SAFE_INTEGER);
+      console.log(Number.MIN_SAFE_INTEGER);
+    </script>
+  </body>
+</html>
