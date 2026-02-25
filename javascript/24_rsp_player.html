@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="rspPlayer('가위')">가위</button>
+    <button onclick="rspPlayer('바위')">바위</button>
+    <button onclick="rspPlayer('보')">보</button>
+    <script>
+      function getRandomInteger(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+
+      function rspPlayer(userRsp) {
+        const rsp = ["가위", "바위", "보"];
+        const computerRsp = rsp[getRandomInteger(0, 2)];
+
+        const userWinValue = {
+          가위: "보",
+          바위: "가위",
+          보: "바위",
+        };
+
+        console.log("사용자가 선택한 것", userRsp);
+        console.log("컴퓨터가 선택한 것", computerRsp);
+
+        const result =
+          userRsp === computerRsp
+            ? "무승부"
+            : userWinValue[userRsp] === computerRsp
+              ? "사용자 승리"
+              : "컴퓨터 승리";
+
+        console.log(result);
+      }
+    </script>
+  </body>
+</html>
