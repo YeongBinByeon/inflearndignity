@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Set 객체 - 배열(Array)
+      // 좋아하는 음식을 단답 형으로 입력하는 설문조사
+      // 사용자가 입력한 음식명을 배열에 저장
+      let foods = ["햄버거", "김치찌개", "된장찌개", "제육볶음", "김치찌개"];
+      // 유니크한 음식명만 별도의 배열에 저장하고 싶음.
+
+      let oFood = {};
+      for (const food of foods) {
+        oFood[food] = "";
+      }
+
+      console.log(oFood);
+      let uniqueFoods = [];
+      for (const key in oFood) {
+        uniqueFoods.push(key);
+      }
+      console.log(uniqueFoods);
+
+      // Set 객체
+      // 배열처럼 데이터의 집합
+      // value 값으로 무조건 유일한 값만 유지
+      let foodSet = new Set();
+      foodSet.add("1");
+      foodSet.add("2");
+      foodSet.add("3");
+      foodSet.add("1");
+      foodSet.add("2");
+
+      foodSet.forEach((food) => {
+        console.log(food);
+      });
+
+      console.log(foodSet.has("3")); // 있으므로 true
+      console.log(foodSet.has("4")); // 없으므로 false
+
+      // foodSet.clear(); // 모두 삭제
+    </script>
+  </body>
+</html>
