@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // window 객체
+
+      alert("이것은 경고입니다.");
+
+      function doDelete() {
+        const pass = prompt("비밀번호를 입력하셔야 삭제가 진행됩니다.");
+        if (pass === "1234") {
+          if (confirm("정말 삭제 하시겠습니까?")) {
+            console.log("삭제 되었습니다.");
+          }
+        } else {
+          alert("비밀번호가 틀립니다.");
+        }
+      }
+
+      function openNaver() {
+        window.open("https://naver.com");
+      }
+
+      const myFunc = setTimeout(() => {
+        console.log("3초 후에 출력됩니다.");
+      }, 3000);
+
+      clearTimeout(myFunc);
+
+      const myFunc2 = setInterval(() => {
+        console.log("2초마다 실행됩니다.");
+      }, 2000);
+
+      // clearInterval(myFunc);
+    </script>
+  </body>
+</html>

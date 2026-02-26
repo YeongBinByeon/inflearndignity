@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // JSON (Javascript Object Notation)
+      // 데이터를 저장하거나 전송할 때 많이 사용되는 데이터 교환 형식
+      // 데이터 포맷
+      // 클라이언트랑 서버간의 데이터를 전송할 때, 가장 많이 사용하는 데이터 포맷
+
+      let person = {
+        name: "홍길동",
+        age: 22,
+        tel: "010-0000-0000",
+        address: "서울시",
+        email: "hong@gmail.com",
+      };
+
+      console.log(person);
+      // 클라이언트에서 서버로 전송할 때는
+      // 이렇게 stringify 함수를 사용해서 JSON 데이터 포맷에 해당하는 문자열로 변환해서 서버로 전송
+      const strPerson = JSON.stringify(person);
+      console.log(strPerson);
+
+      // 서버에서 클라이언트로 JSON 포맷으로 데이터가 전송되었을 때
+      // 문자열
+      // parse() - 문자열로 되어 있는 JSON 포맷을 자바스크립트 오브젝트로 변환
+      const oPerson = JSON.parse(strPerson);
+      console.log(oPerson);
+    </script>
+  </body>
+</html>
