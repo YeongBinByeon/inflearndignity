@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Scope - 선언된 변수에 대한 접근성을 의미
+
+      function myFunction() {
+        let carName = "기아차";
+        console.log(carName);
+      }
+      myFunction();
+
+      // console.log(carName);
+
+      let carName2 = "볼보";
+      function myFunction2() {
+        console.log(carName2);
+      }
+
+      myFunction2();
+
+      let carName3 = "현대차";
+      function myFunction3() {
+        let carName3 = "아우디";
+        console.log(carName3); // 아우디 출력
+      }
+    </script>
+  </body>
+</html>
