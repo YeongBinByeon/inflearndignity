@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let num1 = [1, 2, 3];
+      let num2 = [4, 5, 6];
+      let num3 = num1.concat(num2);
+      console.log(num3);
+
+      // spread operator
+      // 배열을 분해해서 각각의 요소를 다 따로 분리해준다.
+      let num4 = [...num1, ...num2];
+      console.log(num4);
+
+      let alpha1 = ["A", "B", "C"];
+      let alpha2 = ["D", "E", "F"];
+      let alpha3 = [...alpha1, ...alpha2];
+      console.log(alpha3);
+    </script>
+  </body>
+</html>
