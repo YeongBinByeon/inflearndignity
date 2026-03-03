@@ -45,9 +45,15 @@ export default {
       customers: []
     }
   },
-  created() {},
+  created() {
+    this.getCustomerList()
+  },
   mounted() {},
   unmounted() {},
-  methods: {}
+  methods: {
+    async getCustomerList() {
+      this.customers = await this.$get('http://localhost:4000/customers')
+    }
+  }
 }
 </script>
