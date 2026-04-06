@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="btnSave">저장</button>
+    <button id="btnSearch">조회</button>
+    <button id="btnDelete">삭제</button>
+    <script>
+      function setEvent() {
+        document
+          .getElementById("btnSave")
+          .addEventListener("click", function () {
+            console.log("저장 실행");
+          });
+
+        document
+          .getElementById("btnSearch")
+          .addEventListener("click", function () {
+            console.log("조회 실행");
+          });
+
+        document
+          .getElementById("btnDelete")
+          .addEventListener("click", function () {
+            console.log("삭제 실행");
+          });
+      }
+
+      // load - html 태그가 dom 객체 트리 모델로 모두 추가가 되었을 때
+      window.addEventListener("load", function () {
+        setEvent();
+      });
+    </script>
+  </body>
+</html>
