@@ -1,12 +1,17 @@
 {
   "posts": [
     {
-      "title": "HTML",
-      "author": "JerJohn Doe",
-      "id": "1"
+      "id": "5cb4",
+      "title": "JavaScript",
+      "author": "Jeremy"
     },
     {
-      "id": "5cb4",
+      "id": "52f7",
+      "title": "JavaScript",
+      "author": "Jeremy"
+    },
+    {
+      "id": "d922",
       "title": "JavaScript",
       "author": "Jeremy"
     }
@@ -15,15 +20,21 @@
     {
       "id": "1",
       "text": "a comment about post 1",
-      "postId": "1"
+      "postId": null
     },
     {
       "id": "2",
       "text": "another comment about post 1",
-      "postId": "1"
+      "postId": null
     }
   ],
-  "customers": [{ "id": 1, "index": 0, "name": "drake" }],
+  "customers": [
+    {
+      "id": "1",
+      "index": 0,
+      "name": "drake"
+    }
+  ],
   "profile": {
     "name": "typicode"
   },
