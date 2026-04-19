@@ -93,7 +93,9 @@
           h.push(
             `<td><input type="checkbox" name="chk" value="${item.id}" onchange="isChecked()"></td>`,
           );
-          h.push(`<td>${item.name}</td>`);
+          h.push(
+            `<td ><a href="javascript:goToDetail('${item.id}');">${item.name}</td>`,
+          );
           h.push(`<td>${item.company}</td>`);
           h.push(`<td>${item.gender}</td>`);
           h.push(`<td>${item.email}</td>`);
@@ -153,6 +155,10 @@
         if (event.keyCode === 13) {
           doSearch();
         }
+      }
+
+      function goToDetail(id) {
+        document.location.href = `61_dom_crud_detail.html?id=${id}&v1=1&name=jeremy`;
       }
     </script>
   </body>
