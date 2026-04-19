@@ -67,25 +67,10 @@
         <button onclick="goToList()">목록</button>
       </div>
     </div>
+    <script src="./js/common.js"></script>
     <script>
       // queryString
       // console.log(window.location.search);
-
-      function parseQueryString() {
-        if (window.location.search === 0) {
-          return {};
-        } else {
-          const queryStringObject = {};
-          const queryString = window.location.search.substring(1).split("&");
-          console.log(queryString);
-          for (const s of queryString) {
-            const q = s.split("=");
-            queryStringObject[q[0]] = q[1];
-          }
-          console.log(queryStringObject);
-          return queryStringObject;
-        }
-      }
 
       async function doSearchDetail() {
         const { id } = parseQueryString();
@@ -109,7 +94,8 @@
       }
 
       function goToUpdate() {
-        document.location.href = "62_dom_crud_update.html";
+        const { id } = parseQueryString();
+        document.location.href = `62_dom_crud_update.html?id=${id}`;
       }
 
       doSearchDetail();

@@ -12,3 +12,19 @@ function taxAmount(productAmount) {
 function getTop5() {
   return [];
 }
+
+function parseQueryString() {
+  if (window.location.search === 0) {
+    return {};
+  } else {
+    const queryStringObject = {};
+    const queryString = window.location.search.substring(1).split("&");
+    console.log(queryString);
+    for (const s of queryString) {
+      const q = s.split("=");
+      queryStringObject[q[0]] = q[1];
+    }
+    console.log(queryStringObject);
+    return queryStringObject;
+  }
+}
