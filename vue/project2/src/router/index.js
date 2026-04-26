@@ -295,6 +295,14 @@ const routes = [
       import(
         /* webpackChunkName: "module", webpackPrefetch:true */ '../views/11_template/p1/SingleViewEditView.vue'
       )
+  },
+  {
+    path: '/template/p2/multiple',
+    name: 'MultipleEditView',
+    component: () =>
+      import(
+        /* webpackChunkName: "module", webpackPrefetch:true */ '../views/11_template/p2/MultipleEditView.vue'
+      )
   }
 ]
 
