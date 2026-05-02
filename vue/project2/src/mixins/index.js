@@ -1,4 +1,6 @@
 import axios from 'axios'
+import ExcelJS from 'exceljs'
+import { saveAs } from 'file-saver'
 axios.defaults.baseURL = 'http://localhost:4000'
 axios.defaults.headers['Content-Type'] = 'application/json;charset=utf-8'
 axios.defaults.headers['Access-Control-Allow-Origin'] = '*'
@@ -128,6 +130,30 @@ export default {
       }
 
       return sign + currencySymbol + v + d + lastSymbol
+    },
+    async $excelFromTable(
+      header = [],
+      rows = [],
+      fileName = 'excel',
+      option = {}
+    ) {
+      /* eslint-disable */
+      header = header.filter((h) => h.title && h.key)
+
+      const wb = new ExcelJS.Workbook()
+      const ws = wb.addWorksheet()
+      ws.addTable({
+        name: 'myTable',
+        ref: 'A1',
+        headerRow: true,
+        columns: header.map((h) => ({
+          name: h.title
+        })),
+        rows: rows.map((r) => header.map((h) => r[h.key])),
+        ...option
+      })
+
+      saveAs(new Blob([await wb.xlsx.writeBuffer()]), `${fileName}.xlsx`)
     }
   }
 }
